@@ -25,10 +25,11 @@
 }
 
 - (void)buttonClicked:(UIButton *)btn {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(modalViewControllerDidClickedDismissButton:)]) {
-        [self.delegate modalViewControllerDidClickedDismissButton:self];
-    }
+//    if (self.delegate && [self.delegate respondsToSelector:@selector(modalViewControllerDidClickedDismissButton:)]) {
+//        [self.delegate modalViewControllerDidClickedDismissButton:self];
+//    }
 
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

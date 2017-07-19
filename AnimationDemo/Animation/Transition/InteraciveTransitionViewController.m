@@ -49,13 +49,11 @@
     [self presentViewController:mvc animated:YES completion:nil];
 }
 
-- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
-{
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
     return self.presentAnimation;
 }
 
--(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
-{
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
     return self.dismissAnimation;
 }
 
@@ -63,7 +61,7 @@
     return self.transitionController.interacting ? self.transitionController : nil;
 }
 
--(void) modalViewControllerDidClickedDismissButton:(ModalViewController *)viewController {
+- (void)modalViewControllerDidClickedDismissButton:(ModalViewController *)viewController {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

@@ -9,8 +9,8 @@
 #import "SwipeUpInteractiveTransition.h"
 
 @interface SwipeUpInteractiveTransition()
-@property (nonatomic, assign) BOOL shouldComplete;
-@property (nonatomic, strong) UIViewController *presentingVC;
+@property (nonatomic, assign) BOOL shouldComplete;//是否处于切换过程
+@property (nonatomic, weak) UIViewController *presentingVC;
 @end
 
 @implementation SwipeUpInteractiveTransition
@@ -35,6 +35,7 @@
             break;
         case UIGestureRecognizerStateChanged:
         {
+            //计算百分比,设定向下滑400像素或以上为100%,结果限制在0-1之间,然后更新interactionTransition的百分数
             CGFloat fraction = translation.y / 400.0;
             fraction = fminf(fmax(fraction, 0), 1);
             self.shouldComplete = (fraction > 0.5);
@@ -58,5 +59,7 @@
 - (CGFloat)completionSpeed {
     return 1 - self.percentComplete;
 }
+
+
 
 @end
