@@ -10,6 +10,8 @@
 #import "ChildViewController.h"
 #import "AnimationManager.h"
 
+
+
 @interface PrivateAnimatedTransition : NSObject <UIViewControllerAnimatedTransitioning>
 @end
 
@@ -147,6 +149,9 @@ static CGFloat const kInitialSpringVelocity = 0.5;
 
 
 
+@interface Animation : NSObject<ContainerViewControllerDelegate>
+
+@end
 
 static CGFloat const kButtonSlotWidth = 64;
 static CGFloat const kButtonSlotHeight = 44;
@@ -156,6 +161,7 @@ static CGFloat const kButtonSlotHeight = 44;
 @property (nonatomic, strong) NSArray *viewControllers;
 @property (nonatomic, strong) UIView *privateButtonsView;
 @property (nonatomic, strong) UIView *privateContainerView;
+@property (nonatomic, strong) Animation *animation;
 
 @end
 
@@ -167,7 +173,9 @@ static CGFloat const kButtonSlotHeight = 44;
     [self initSubView];
     self.selectedViewController = (self.selectedViewController ?: self.viewControllers[0]);
     self.view.backgroundColor = [UIColor whiteColor];
-
+    
+    self.animation = [[Animation alloc] init];
+    //self.delegate = self.animation;
     
 }
 
@@ -266,7 +274,7 @@ static CGFloat const kButtonSlotHeight = 44;
     if (toViewController == fromViewController || ![self isViewLoaded]) {
         return;
     }
-    
+
     
     UIView *toView = toViewController.view;
     [toView setTranslatesAutoresizingMaskIntoConstraints:YES];
@@ -284,9 +292,9 @@ static CGFloat const kButtonSlotHeight = 44;
 
     
     id<UIViewControllerAnimatedTransitioning>animator = nil;
-//    if ([self.delegate respondsToSelector:@selector (containerViewController:animationControllerForTransitionFromViewController:toViewController:)]) {
-//        animator = [self.delegate containerViewController:self animationControllerForTransitionFromViewController:fromViewController toViewController:toViewController];
-//    }
+    if ([self.delegate respondsToSelector:@selector (containerViewController:animationControllerForTransitionFromViewController:toViewController:)]) {
+        animator = [self.delegate containerViewController:self animationControllerForTransitionFromViewController:fromViewController toViewController:toViewController];
+    }
     animator = (animator ?: [[PrivateAnimatedTransition alloc] init]);
     
     NSUInteger fromIndex = [self.viewControllers indexOfObject:fromViewController];
@@ -336,3 +344,19 @@ static CGFloat const kButtonSlotHeight = 44;
 @end
 
 
+@implementation Animation
+
+- (instancetype)init {
+    if (self = [super init]) {
+        
+    }
+    return self;
+}
+
+#pragma mark - ContainerViewControllerDelegate Protocol
+
+- (id <UIViewControllerAnimatedTransitioning>)containerViewController:(TransitionViewController *)containerViewController animationControllerForTransitionFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController {
+    return [[AnimationManager alloc] init];
+}
+
+@end

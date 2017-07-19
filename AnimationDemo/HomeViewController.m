@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "GroupViewController.h"
 #import "TransitionViewController.h"
+#import "InteraciveTransitionViewController.h"
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -56,7 +57,7 @@
 - (NSMutableArray *)dataList {
     if (!_dataList) {
         _dataList = [NSMutableArray array];
-        [_dataList addObjectsFromArray:@[@"GroupViewController",@"TransitionViewController"]];
+        [_dataList addObjectsFromArray:@[@"GroupViewController",@"TransitionViewController",@"InteraciveTransitionViewController"]];
     }
     return _dataList;
 }

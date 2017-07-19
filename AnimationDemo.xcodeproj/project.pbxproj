@@ -17,6 +17,11 @@
 		4C2D59C31F1DD7220067B1D2 /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D59C21F1DD7220067B1D2 /* GroupViewController.m */; };
 		4C2D59C61F1E07190067B1D2 /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D59C51F1E07190067B1D2 /* ChildViewController.m */; };
 		4C2D59C91F1E15380067B1D2 /* AnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D59C81F1E15380067B1D2 /* AnimationManager.m */; };
+		4C2D59D41F1F752C0067B1D2 /* InteraciveTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D59D31F1F752C0067B1D2 /* InteraciveTransitionViewController.m */; };
+		4C2D59D71F1F75690067B1D2 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D59D61F1F75690067B1D2 /* ModalViewController.m */; };
+		4C2D59DA1F1F80F60067B1D2 /* BouncePresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D59D91F1F80F60067B1D2 /* BouncePresentAnimation.m */; };
+		4C2D59DD1F1F81050067B1D2 /* NormalDismissAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D59DC1F1F81050067B1D2 /* NormalDismissAnimation.m */; };
+		4C2D59E01F1F82220067B1D2 /* SwipeUpInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D59DF1F1F82220067B1D2 /* SwipeUpInteractiveTransition.m */; };
 		B99BE5671176D6DD764754AA /* libPods-AnimationDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 775B7336C975570484ED65B9 /* libPods-AnimationDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +45,16 @@
 		4C2D59C51F1E07190067B1D2 /* ChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
 		4C2D59C71F1E15380067B1D2 /* AnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationManager.h; sourceTree = "<group>"; };
 		4C2D59C81F1E15380067B1D2 /* AnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationManager.m; sourceTree = "<group>"; };
+		4C2D59D21F1F752C0067B1D2 /* InteraciveTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteraciveTransitionViewController.h; sourceTree = "<group>"; };
+		4C2D59D31F1F752C0067B1D2 /* InteraciveTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteraciveTransitionViewController.m; sourceTree = "<group>"; };
+		4C2D59D51F1F75690067B1D2 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		4C2D59D61F1F75690067B1D2 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		4C2D59D81F1F80F60067B1D2 /* BouncePresentAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BouncePresentAnimation.h; sourceTree = "<group>"; };
+		4C2D59D91F1F80F60067B1D2 /* BouncePresentAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BouncePresentAnimation.m; sourceTree = "<group>"; };
+		4C2D59DB1F1F81050067B1D2 /* NormalDismissAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalDismissAnimation.h; sourceTree = "<group>"; };
+		4C2D59DC1F1F81050067B1D2 /* NormalDismissAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalDismissAnimation.m; sourceTree = "<group>"; };
+		4C2D59DE1F1F82220067B1D2 /* SwipeUpInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeUpInteractiveTransition.h; sourceTree = "<group>"; };
+		4C2D59DF1F1F82220067B1D2 /* SwipeUpInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeUpInteractiveTransition.m; sourceTree = "<group>"; };
 		6D3F3394E9B02DC902709989 /* Pods-AnimationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnimationDemo/Pods-AnimationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		775B7336C975570484ED65B9 /* libPods-AnimationDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimationDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,6 +125,7 @@
 		4C2D59B41F1DB5570067B1D2 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				4C2D59D11F1F75030067B1D2 /* Transition */,
 				4C2D59C11F1DD7220067B1D2 /* GroupViewController.h */,
 				4C2D59C21F1DD7220067B1D2 /* GroupViewController.m */,
 				4C2D59BE1F1DBB5A0067B1D2 /* TransitionViewController.h */,
@@ -120,6 +136,23 @@
 				4C2D59C81F1E15380067B1D2 /* AnimationManager.m */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		4C2D59D11F1F75030067B1D2 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				4C2D59D21F1F752C0067B1D2 /* InteraciveTransitionViewController.h */,
+				4C2D59D31F1F752C0067B1D2 /* InteraciveTransitionViewController.m */,
+				4C2D59D51F1F75690067B1D2 /* ModalViewController.h */,
+				4C2D59D61F1F75690067B1D2 /* ModalViewController.m */,
+				4C2D59D81F1F80F60067B1D2 /* BouncePresentAnimation.h */,
+				4C2D59D91F1F80F60067B1D2 /* BouncePresentAnimation.m */,
+				4C2D59DB1F1F81050067B1D2 /* NormalDismissAnimation.h */,
+				4C2D59DC1F1F81050067B1D2 /* NormalDismissAnimation.m */,
+				4C2D59DE1F1F82220067B1D2 /* SwipeUpInteractiveTransition.h */,
+				4C2D59DF1F1F82220067B1D2 /* SwipeUpInteractiveTransition.m */,
+			);
+			path = Transition;
 			sourceTree = "<group>";
 		};
 		6E23C8CCE34C658387D11835 /* Pods */ = {
@@ -253,13 +286,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2D59DA1F1F80F60067B1D2 /* BouncePresentAnimation.m in Sources */,
 				4C2D59C31F1DD7220067B1D2 /* GroupViewController.m in Sources */,
 				4C2D59C01F1DBB5A0067B1D2 /* TransitionViewController.m in Sources */,
 				4C2D59931F1C662B0067B1D2 /* AppDelegate.m in Sources */,
+				4C2D59D41F1F752C0067B1D2 /* InteraciveTransitionViewController.m in Sources */,
+				4C2D59DD1F1F81050067B1D2 /* NormalDismissAnimation.m in Sources */,
 				4C2D59AA1F1DAA440067B1D2 /* HomeViewController.m in Sources */,
+				4C2D59D71F1F75690067B1D2 /* ModalViewController.m in Sources */,
 				4C2D59C91F1E15380067B1D2 /* AnimationManager.m in Sources */,
 				4C2D59901F1C662B0067B1D2 /* main.m in Sources */,
 				4C2D59C61F1E07190067B1D2 /* ChildViewController.m in Sources */,
+				4C2D59E01F1F82220067B1D2 /* SwipeUpInteractiveTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
